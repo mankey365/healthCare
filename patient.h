@@ -16,52 +16,23 @@
 
 #include <string>
 #include <climits>
-
-enum sex{MALE, FEMALE};
-
-struct age{
-    int years;
-    int months;
-    age(){
-        years=INT_MIN;
-        months=INT_MIN;
-    }
-    age(int _yr,int _mn){
-        this->years=_yr;
-        this->months=_mn;
-    }
-};
+#include "person.h"
 
 
-
-class patient {
+class patient: public person {
 public:
-    patient();
-    patient(std::string,int);
-    patient(std::string,int,int,int,int);
+    patient(long int,std::string, int, int, int, int);
     patient(const patient& orig);
-    age getPatAge();
-    void setPatAge();
+    
     void displayPat();
-    std::string getCity();
-    void setCity(std::string);
+    
     virtual ~patient();
     
 private:
-    std::string patName;
     int patID;
-    int nationalID;
-    std::string dob;
-    int birthYear;
-    int birthMonth;
-    int birthDate;
-    sex sexPresent;
-    std::string cityBirth;
-    std::string countryBirth;
-    std::string nationality;
     std::string permanentAddr;
     std::string residentAddr;
-    age patAge;
+    
 
 };
 

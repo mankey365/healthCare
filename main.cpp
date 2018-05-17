@@ -13,7 +13,9 @@
 
 #include <cstdlib>
 #include <iostream>
+#include "person.h"
 #include "patient.h"
+#include "provider.h"
 
 using namespace std;
 
@@ -21,11 +23,22 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    patient p1("Leo",123445,28,7,1987);
+    
+    person p1("Leo",123445,28,7,1987);
     p1.setCity("Mexico City");
-    std::cout<<p1.getCity()<<"\n";
-    age a=p1.getPatAge();
+    age a=p1.getAge();
     std::cout<<a.years<<"\t"<<a.months<<"\n";
+    
+    patient pat1(38987,"Busquets",98768,26,8,1990);
+    pat1.setCity("NYC");
+    pat1.setNationality(INDIA);
+    pat1.displayPat();
+    
+    provider pat2(10098,"Jordi Alba",1087,15,12,1986);
+    pat2.setCity("Marseille");
+    pat2.setNationality(UK);
+    int x=9;
+    
     return 0;
 }
 
