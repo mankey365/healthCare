@@ -62,7 +62,6 @@ int main(int argc, char** argv) {
         std::cout<<"patient ID= "<<row[1]<<"\n";
     }
     mysql_close(db_conn);
-    int x=99;
     
     
     return 0;
