@@ -28,19 +28,6 @@ patient::~patient() {
 }
 
 
-void patient::displayPat(){
-    
-    std::cout<< this->name<<"\n";
-    std::cout<< this->nationalID<<"\n";
-    std::cout<< this->cityBirth<<"\n";
-    std::cout<< this->countryBirth<<"\n";
-    std::cout<< this->birthDate<<"\n";
-    std::cout<< this->birthMonth<<"\n";
-    std::cout<< this->birthYear<<"\n";
-    age tmpA = this->getAge();
-    std::cout<< tmpA.years<<" years "<<tmpA.months<<" months\n";
-    std::cout<< "city = "<<this->getCity()<<"\n";
-    std::cout<< "nationality = "<<this->getNationality()<<"\n";
-}
+
 
 

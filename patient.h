@@ -24,8 +24,6 @@ public:
     patient(long int,std::string, int, int, int, int);
     patient(const patient& orig);
     
-    void displayPat();
-    
     virtual ~patient();
     
 private:
