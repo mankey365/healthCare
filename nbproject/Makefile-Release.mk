@@ -38,7 +38,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/patient.o \
 	${OBJECTDIR}/person.o \
-	${OBJECTDIR}/provider.o
+	${OBJECTDIR}/provider.o \
+	${OBJECTDIR}/registerPatient.o
 
 
 # C Compiler Flags
@@ -84,6 +85,11 @@ ${OBJECTDIR}/provider.o: provider.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -Imysql-connector-c-6.1.3-linux-glibc2.5-x86_64/include/ -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/provider.o provider.cpp
+
+${OBJECTDIR}/registerPatient.o: registerPatient.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -Imysql-connector-c-6.1.3-linux-glibc2.5-x86_64/include/ -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/registerPatient.o registerPatient.cpp
 
 # Subprojects
 .build-subprojects:
