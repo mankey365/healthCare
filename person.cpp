@@ -63,3 +63,30 @@ void person::setNationality(nationality _nat){
 nationality person::getNationality(){
     return this->curNat;
 }
+
+int person::getNatID(){
+    return this->nationalID;
+}
+
+std::string  person::getDOB(){
+    return this->dob;
+}
+
+std::string  person::getName(){
+    return this->name;
+}
+
+void person::displayPat(){
+    
+    std::cout<< this->name<<"\n";
+    std::cout<< this->nationalID<<"\n";
+    std::cout<< this->cityBirth<<"\n";
+    std::cout<< this->countryBirth<<"\n";
+    std::cout<< this->birthDate<<"\n";
+    std::cout<< this->birthMonth<<"\n";
+    std::cout<< this->birthYear<<"\n";
+    age tmpA = this->getAge();
+    std::cout<< tmpA.years<<" years "<<tmpA.months<<" months\n";
+    std::cout<< "city = "<<this->getCity()<<"\n";
+    std::cout<< "nationality = "<<this->getNationality()<<"\n";
+}

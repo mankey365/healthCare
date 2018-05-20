@@ -42,6 +42,12 @@ public:
     person(std::string,int,int,int,int);
     person(const person& orig);
     
+    int getNatID();
+    
+    std::string getDOB();
+    
+    std::string getName();
+    
     age getAge();
     void setAge();
     
@@ -51,8 +57,10 @@ public:
     std::string getCity();
     void setCity(std::string);
     
+    void displayPat();
+    
     virtual ~person();
-protected:
+private:
     std::string name;
     int nationalID;
     
